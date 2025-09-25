@@ -32,18 +32,26 @@ public class SecurityConfig {
     private JWTAuthFilter jwtAuthFilter;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
+public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    httpSecurity.csrf(AbstractHttpConfigurer::disable)
+            .cors(Customizer.withDefaults())
+            .authorizeHttpRequests(request -> request
+                    .requestMatchers(
+                            "/auth/**",
+                            "/rooms/**",
+                            "/bookings/**",
+                            "/v3/api-docs/**",
+                            "/swagger-ui/**",
+                            "/swagger-ui.html"
+                    ).permitAll()
+                    .anyRequest().authenticated()
+            )
+            .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .authenticationProvider(authenticationProvider())
+            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
-        httpSecurity.csrf(AbstractHttpConfigurer::disable)
-                .cors(Customizer.withDefaults())
-                .authorizeHttpRequests(request-> request
-                        .requestMatchers("/auth/**", "/rooms/**", "/bookings/**").permitAll()
-                        .anyRequest().authenticated())
-                .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-        return httpSecurity.build();
-    }
+    return httpSecurity.build();
+}
     @Bean
     AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
