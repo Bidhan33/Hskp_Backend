@@ -65,10 +65,10 @@ The application is deployed on CSC Rahti.fi using the provided Dockerfile for ea
 ## 🔐 Authentication & Security
 The system implements a robust JWT-based authentication mechanism:
 
-. Token Generation: Secure JWT tokens for user sessions
-. Role-based Access: Different access levels for users and administrators
-. Protected Endpoints: Most endpoints require valid authentication tokens
-. Spring Security: Comprehensive security configuration for API protection
+- Token Generation: Secure JWT tokens for user sessions
+- Role-based Access: Different access levels for users and administrators
+- Protected Endpoints: Most endpoints require valid authentication tokens
+- Spring Security: Comprehensive security configuration for API protection
 
 ## 📚 API Documentation and Testing with Swagger UI
    https://hskp-backend-git-hskp-app.2.rahtiapp.fi/swagger-ui/index.html
@@ -76,26 +76,26 @@ The system implements a robust JWT-based authentication mechanism:
  ## 🎯 User Roles & Permissions
 **Regular Users**
 
-  Browse available rooms
-  Make room bookings
-  View and manage their bookings
-  Update profile information
+ - Browse available rooms
+ - Make room bookings
+ - View and manage their bookings
+ - Update profile information
 
 **Administrators**
 
-   All user permissions
-  Add, update, and delete rooms
-  View all bookings and users
-  Cancel any booking
-  Delete users
+  - All user permissions
+ - Add, update, and delete rooms
+ - View all bookings and users
+ - Cancel any booking
+ - Delete users
 
 ## 🚀 Deployment
  The application is containerized using Docker and deployed on CSC Rahti.fi platform, ensuring:
 
- Scalability: Easy horizontal scaling
- Reliability: Robust cloud infrastructure
- Efficiency: Optimized resource utilization
- Maintainability: Simple deployment and updates
+- Scalability: Easy horizontal scaling
+- Reliability: Robust cloud infrastructure
+- Efficiency: Optimized resource utilization
+- Maintainability: Simple deployment and updates
 
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
