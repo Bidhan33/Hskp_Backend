@@ -100,6 +100,9 @@ The system implements a robust JWT-based authentication mechanism:
 - Efficiency: Optimized resource utilization
 - Maintainability: Simple deployment and updates
 
+## DataBase Schema Diagram 
+<img width="563" height="597" alt="image" src="https://github.com/user-attachments/assets/b4989d57-af1a-4b5e-b310-25d86e1f0b36" />
+
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
