@@ -5,8 +5,11 @@ A comprehensive hotel booking and management system built with **Spring Boot**, 
 ---
 
 ## 📖 Overview
-This backend application provides a complete hotel booking solution where users can browse available rooms, make reservations, and manage their bookings.  
-Administrators have full control over room management and can oversee all bookings in the system.
+The Hotel Booking and Management System is a backend application built with Spring Boot that provides a complete solution for managing hotel operations such as user registration, authentication, room management, and booking reservations. The system is designed with role-based access control, ensuring that administrators and regular users have different levels of permissions. Authentication and authorization are handled using JWT (JSON Web Tokens), providing secure access to the API endpoints.
+
+The backend communicates with a MongoDB database, which stores all the application data including user information, room details, and booking records. The service layer handles the core business logic, while RESTful controllers expose endpoints for client interaction. The application is fully containerized using Docker, enabling easy portability and deployment. For production deployment, the project was hosted on CSC Rahti, a Kubernetes-based cloud platform, where the Docker image was built and deployed to run in a scalable and managed environment.
+
+This setup ensures that the system is not only secure and modular but also easily deployable and scalable for real-world use cases, making it suitable as a foundation for hotel management solutions.
 
 ---
 
