@@ -74,7 +74,7 @@ The system implements a robust JWT-based authentication mechanism:
 - Spring Security: Comprehensive security configuration for API protection
 
 ## 📚 API Documentation and Testing with Swagger UI
-   https://hskp-backend-git-hskp-app.2.rahtiapp.fi/swagger-ui/index.html
+   [https://hskp-backend-git-hskp-app.2.rahtiapp.fi/swagger-ui/index.html](https://backend-programming-project-backend-123-14.2.rahtiapp.fi/swagger-ui/index.html)
 
  ## 🎯 User Roles & Permissions
 **Regular Users**
